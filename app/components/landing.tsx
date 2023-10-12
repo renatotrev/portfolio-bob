@@ -36,7 +36,7 @@ const Landing = ({ navDownClicked }: { navDownClicked: any }) => {
             </section>
           </section>
           <section>
-            <Image className='rounded-xl' src='/Bob.png' width={380} height={540} alt=''></Image>
+            <Image className='rounded-xl' src='/portfolio-bob/Bob.png' width={380} height={540} alt=''></Image>
           </section>
         </section>
 

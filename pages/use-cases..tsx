@@ -19,13 +19,13 @@ export default function Page() {
       name: 'MidJourney Redesign',
       category: 'UX UI Study Case',
       description: 'A Journey from Discord to a Unified Web Experience.',
-      image: '/MidJourneyRedesign.png',
+      image: '/portfolio-bob/MidJourneyRedesign.png',
     },
     [USE_CASE._2]: {
       name: 'MetAmazonia UX / UI',
       category: 'Work Project',
       description: 'Blending Technology and Conservation for the Amazon Ecosystem.',
-      image: '/MetAmazonia.png',
+      image: '/portfolio-bob/MetAmazonia.png',
     }
   }
   const ellipsesComponent = Object.keys(useCases).map((index) => <i key={index} className={`ellipse ${index === currentPage ? 'active bg-green' : 'bg-grey'}`}></i>);
