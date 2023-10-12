@@ -49,6 +49,7 @@ const UseCase = ({ usaCaseData, hideNavDown, navDownClicked, navUpClicked }: { u
           <p className='text-[15px]/[28px] pt-6 uppercase'>
             {usaCaseData.description}
           </p>
+          <button className='text-[20px]/[26px] w-[132px] h-[50px] mt-10 bg-green text-black rounded-md'>Discover</button>
         </section>
         <section>
           <Image className='w-[780px] h-[540px] rounded-xl' src={usaCaseData.image} width={780} height={540} alt=''></Image>
@@ -58,7 +59,6 @@ const UseCase = ({ usaCaseData, hideNavDown, navDownClicked, navUpClicked }: { u
         <button className='w-[48px] h-[48px] rounded-full bg-green flex content-center' onClick={navUpClicked}>
           <ChevronUpIcon className="w-[24px] h-[48px] text-black m-auto" />
         </button>
-
         {!hideNavDown ? (
           <button className='w-[48px] h-[48px] rounded-full bg-green flex content-center' onClick={navDownClicked}>
             <ChevronDownIcon className="w-[24px] h-[48px] text-black m-auto" />
