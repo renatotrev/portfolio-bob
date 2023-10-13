@@ -6,7 +6,7 @@ import Head from "next/head";
 
 function App({ Component, pageProps }: { Component: any, pageProps: any}) {
   return (
-    <main className='max-w-[320px] xl:max-w-screen-xl m-auto h-screen'>
+    <main className='h-screen'>
       <Head>
         <title>▶ Portfolio - Guilherme Anjos - Web Portfolio</title>
         <link rel="icon" href="/favicon.ico" />

@@ -1,6 +1,6 @@
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <section className='block bg-black h-full'>
+    <section className='block h-screen'>
         { children }
     </section>
   );

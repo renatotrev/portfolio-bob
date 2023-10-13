@@ -11,8 +11,10 @@ const config: Config = {
       transparent: 'transparent',
       current: 'currentColor',
       'black': '#181818',
+      'blue': '#0082FF',
       'white': '#FFFFFF',
       'grey': '#D9D9D9',
+      'light-grey': '#F5F5F5',
       'green': '#D7FC70',
     },
     fontSize: {

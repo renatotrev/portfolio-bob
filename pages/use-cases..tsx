@@ -40,14 +40,16 @@ export default function Page() {
   }
 
   return (
-    <section>
-      <Nav></Nav>
-      <section className='pt-24 flex justify-end space-x-2'>
-        { ellipsesComponent }
+    <section className='bg-black h-screen'>
+      <section className='max-w-[320px] xl:max-w-screen-xl m-auto'>
+        <Nav></Nav>
+        <section className='pt-24 flex justify-end space-x-2'>
+          {ellipsesComponent}
+        </section>
+        <main className="flex flex-col justify-between pt-6 h-[1000px]">
+          {currentComponent}
+        </main>
       </section>
-      <main className="flex flex-col justify-between pt-6 h-[1000px]">
-        {currentComponent}
-      </main>
     </section>
   );
 }

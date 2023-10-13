@@ -7,6 +7,10 @@ export default function Hpme() {
   const router = useRouter();
 
   return (
-    <Landing navDownClicked={() => { router.push('/use-cases') }}></Landing>
+    <section className='bg-black h-screen'>
+      <section className='max-w-[320px] xl:max-w-screen-xl m-auto'>
+        <Landing navDownClicked={() => { router.push('/use-cases') }}></Landing>
+      </section>
+    </section>
   )
 };

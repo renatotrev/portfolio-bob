@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { usePathname } from 'next/navigation';
-import React from 'react';
+import React, { useState } from 'react';
 import usePreviousRoute from '@/app/hooks/usePreviousRoute';
 
 const isClient = typeof window !== 'undefined';
@@ -99,6 +99,8 @@ export const variants: Variants = {
 }
 
 const Transition = ({ children }: { children: React.ReactNode }) => {
+  const [effectClass, setEffectClass] = useState('effect');
+
   const pathname = usePathname();
   const previousRoute = usePreviousRoute();
 
@@ -119,14 +121,23 @@ const Transition = ({ children }: { children: React.ReactNode }) => {
   }
 
 
-  console.log(animate);
   return (
-    <div className="effect">
+    <div className={effectClass}>
       <AnimatePresence
-        initial={false}
+        initial={true}
         mode='popLayout'
       >
         <motion.div
+          onAnimationStart={(definition) => {
+            if (definition === 'exitingBouncePage' && pathname === '/about') {
+              setEffectClass('effect');
+            }
+          }}
+          onAnimationComplete={(definition) => {
+            if (definition === 'animatingBouncePage' && pathname === '/about') {
+              setEffectClass('');
+            }
+          }}
           key={pathname}
           variants={variants}
           initial={initial}
