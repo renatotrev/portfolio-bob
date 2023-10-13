@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import { variants } from './transitions';
+import { useState } from 'react';
 
 export interface UseCaseData {
   name: string;
@@ -10,6 +11,8 @@ export interface UseCaseData {
 }
 
 const UseCase = ({ animationDirection, usaCaseData, hideNavDown, navDownClicked, navUpClicked }: { animationDirection: string, usaCaseData: UseCaseData, hideNavDown: boolean, navDownClicked: any, navUpClicked: any }) => {
+  const [navBlocked, setNavBlocked] = useState(false);
+
   return (
     <section>
       <section className='flex justify-between'>
@@ -19,6 +22,8 @@ const UseCase = ({ animationDirection, usaCaseData, hideNavDown, navDownClicked,
             mode='popLayout'
           >
             <motion.div
+              onAnimationComplete={() => setTimeout(() => setNavBlocked(false), 10)}
+              onAnimationStart={() => setNavBlocked(true)}
               key={usaCaseData.category}
               initial="hidden"
               animate="visible"
@@ -85,11 +90,11 @@ const UseCase = ({ animationDirection, usaCaseData, hideNavDown, navDownClicked,
 
       </section>
       <section className='flex flex-col flex-wrap-reverse justify-end pt-32 space-y-6'>
-        <button className='w-[48px] h-[48px] rounded-full bg-green flex place-content-center items-center rotate-180' onClick={navUpClicked}>
+        <button className='w-[48px] h-[48px] rounded-full bg-green flex place-content-center items-center rotate-180' onClick={() => !navBlocked && navUpClicked()}>
           <Image src='/portfolio-bob/icons/Arrow.svg' alt='' width={20} height={12}></Image>
         </button>
         {!hideNavDown ? (
-          <button className='w-[48px] h-[48px] rounded-full bg-green flex place-content-center items-center' onClick={navDownClicked}>
+          <button className='w-[48px] h-[48px] rounded-full bg-green flex place-content-center items-center' onClick={() => !navBlocked && navDownClicked()}>
             <Image src='/portfolio-bob/icons/Arrow.svg' alt='' width={20} height={12}></Image>
           </button>
         ) : <div className='w-[48px] h-[48px]'></div>}
