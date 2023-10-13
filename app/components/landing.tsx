@@ -1,13 +1,11 @@
 'use client'
 
 import Image from 'next/image';
-import { ChevronDownIcon, GlobeEuropeAfricaIcon, MapPinIcon, LanguageIcon } from '@heroicons/react/24/solid'
-
 import Nav from '@/app/components/nav';
 
 const Landing = ({ navDownClicked }: { navDownClicked: any }) => {
   return (
-    <section>
+    <>
       <Nav></Nav>
       <main className="flex flex-col pt-24">
         <section className='flex justify-between'>
@@ -18,37 +16,38 @@ const Landing = ({ navDownClicked }: { navDownClicked: any }) => {
 
             <section className='flex justify-between text-xl text-green pt-12'>
               <span className='flex items-center space-x-2 h-[50px]'>
-                <GlobeEuropeAfricaIcon className='w-[22px] h-[22px]' />
+                <Image src='/portfolio-bob/icons/World (Brazilian).svg' width={22} height={22} alt=''></Image>
                 <p>Brazilian</p>
               </span>
               <span className='flex items-center space-x-2 h-[50px]'>
-                <MapPinIcon className='w-[22px] h-[22px]' />
+                <Image src='/portfolio-bob/icons/Location (Helsinki).svg' width={22} height={22} alt=''></Image>
                 <p>Helsinki</p>
               </span>
               <span className='flex items-center space-x-2 h-[50px]'>
-                <LanguageIcon className='w-[22px] h-[22px]' />
+                <Image src='/portfolio-bob/icons/Languages.svg' width={22} height={22} alt=''></Image>
                 <p>English</p>
               </span>
               <span className='flex items-center space-x-2 h-[50px]'>
-                <LanguageIcon className='w-[22px] h-[22px]' />
+                <Image src='/portfolio-bob/icons/Languages.svg' width={22} height={22} alt=''></Image>
+
                 <p>Portuguese</p>
               </span>
             </section>
           </section>
           <section>
-            <Image className='rounded-xl' src='/portfolio-bob/Bob.png' width={380} height={540} alt=''></Image>
+            <Image className='rounded-xl' src='/portfolio-bob/home/Bob.png' width={380} height={540} alt=''></Image>
           </section>
         </section>
 
 
-        <section className='flex flex-col flex-wrap-reverse justify-end pt-32 space-y-6'>
+        <section className='flex flex-col flex-wrap-reverse justify-end pt-40 space-y-6'>
           <div className='w-[48px] h-[48px]'></div>
-          <button className='w-[48px] h-[48px] rounded-full bg-green flex content-center' onClick={navDownClicked}>
-            <ChevronDownIcon className="w-[24px] h-[48px] text-black m-auto" />
+          <button className='w-[48px] h-[48px] rounded-full bg-green flex place-content-center items-center' onClick={navDownClicked}>
+            <Image src='/portfolio-bob/icons/Arrow.svg' alt='' width={20} height={12}></Image>
           </button>
         </section>
       </main>
-    </section>
+    </>
   );
 };
 

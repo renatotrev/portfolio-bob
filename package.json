@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@fontsource-variable/plus-jakarta-sans": "^5.0.16",
-    "@heroicons/react": "^2.0.18",
     "framer-motion": "^10.16.4",
     "next": "13.5.4",
     "react": "^18",

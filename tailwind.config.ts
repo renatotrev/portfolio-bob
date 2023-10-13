@@ -65,6 +65,9 @@ const config: Config = {
       80: '320px',
       96: '384px',
     },
+    screens: {
+      'xl': '1440px',
+    },
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

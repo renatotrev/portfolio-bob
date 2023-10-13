@@ -32,7 +32,7 @@ const Nav = () => {
   });
 
   return (
-    <header className='max-w-screen-xl items-center justify-between text-sm lg:flex pt-10 h-32'>
+    <header className='max-w-screen-xl flex items-center justify-between text-sm lg:flex pt-10 h-32'>
       <Link href='/' className='text-2xl font-bold tracking-[.08em] text-grey'>
         {title}
       </Link>

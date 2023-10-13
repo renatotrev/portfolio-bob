@@ -19,23 +19,23 @@ export default function Page() {
       name: 'MidJourney Redesign',
       category: 'UX UI Study Case',
       description: 'A Journey from Discord to a Unified Web Experience.',
-      image: '/portfolio-bob/MidJourneyRedesign.png',
+      image: '/portfolio-bob/midjourney-use-case/thumb.png',
     },
     [USE_CASE._2]: {
       name: 'MetAmazonia UX / UI',
       category: 'Work Project',
       description: 'Blending Technology and Conservation for the Amazon Ecosystem.',
-      image: '/portfolio-bob/MetAmazonia.png',
+      image: '/portfolio-bob/metamazonia-use-case/thumb.png',
     }
   }
   const ellipsesComponent = Object.keys(useCases).map((index) => <i key={index} className={`ellipse ${index === currentPage ? 'active bg-green' : 'bg-grey'}`}></i>);
 
   switch (currentPage) {
     case USE_CASE._1:
-      currentComponent = <UseCase usaCaseData={useCases[USE_CASE._1]} hideNavDown={false} navDownClicked={() => setCurrentPage(USE_CASE._2)} navUpClicked={() => router.push('/')}></UseCase>;
+      currentComponent = <UseCase animationDirection={'Down'} usaCaseData={useCases[USE_CASE._1]} hideNavDown={false} navDownClicked={() => setCurrentPage(USE_CASE._2)} navUpClicked={() => router.push('/')}></UseCase>;
       break;
     case USE_CASE._2:
-      currentComponent = <UseCase usaCaseData={useCases[USE_CASE._2]} hideNavDown={true} navDownClicked={() => { }} navUpClicked={() => setCurrentPage(USE_CASE._1)}></UseCase>;
+      currentComponent = <UseCase animationDirection={'Up'} usaCaseData={useCases[USE_CASE._2]} hideNavDown={true} navDownClicked={() => { }} navUpClicked={() => setCurrentPage(USE_CASE._1)}></UseCase>;
       break;
   }
 

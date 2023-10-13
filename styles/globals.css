@@ -25,6 +25,10 @@ body {
   font-family: 'Plus Jakarta Sans Variable', sans-serif;
 }
 
+.effect {
+  height: 100%;
+}
+
 .ellipse {
   border-radius: 50%;
   width: 8px;
