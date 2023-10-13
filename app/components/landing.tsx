@@ -16,26 +16,26 @@ const Landing = ({ navDownClicked }: { navDownClicked: any }) => {
 
             <section className='flex justify-between text-xl text-green pt-12'>
               <span className='flex items-center space-x-2 h-[50px]'>
-                <Image src='/portfolio-bob/icons/World (Brazilian).svg' width={22} height={22} alt=''></Image>
+                <Image className='w-auto h-auto' src='/portfolio-bob/icons/World (Brazilian).svg' width={22} height={22} alt=''></Image>
                 <p>Brazilian</p>
               </span>
               <span className='flex items-center space-x-2 h-[50px]'>
-                <Image src='/portfolio-bob/icons/Location (Helsinki).svg' width={22} height={22} alt=''></Image>
+                <Image className='w-auto h-auto' src='/portfolio-bob/icons/Location (Helsinki).svg' width={22} height={22} alt=''></Image>
                 <p>Helsinki</p>
               </span>
               <span className='flex items-center space-x-2 h-[50px]'>
-                <Image src='/portfolio-bob/icons/Languages.svg' width={22} height={22} alt=''></Image>
+                <Image className='w-auto h-auto' src='/portfolio-bob/icons/Languages.svg' width={22} height={22} alt=''></Image>
                 <p>English</p>
               </span>
               <span className='flex items-center space-x-2 h-[50px]'>
-                <Image src='/portfolio-bob/icons/Languages.svg' width={22} height={22} alt=''></Image>
+                <Image className='w-auto h-auto' src='/portfolio-bob/icons/Languages.svg' width={22} height={22} alt=''></Image>
 
                 <p>Portuguese</p>
               </span>
             </section>
           </section>
           <section>
-            <Image className='rounded-xl' src='/portfolio-bob/home/Bob.png' width={380} height={540} alt=''></Image>
+            <Image className='w-auto h-auto rounded-xl' src='/portfolio-bob/home/Bob.png' width={380} height={540} alt='' priority={true}></Image>
           </section>
         </section>
 

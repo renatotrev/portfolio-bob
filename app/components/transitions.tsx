@@ -46,7 +46,7 @@ export const variants: Variants = {
   },
   // Slide Down Page
   initializingSlideDownPage: {
-    y: isClient ? window.innerHeight : 1000 * -1,
+    y: isClient ? window.innerHeight * -1: 1000 * -1,
   },
   animatingSlideDownPage: {
     opacity: 1,
@@ -118,6 +118,8 @@ const Transition = ({ children }: { children: React.ReactNode }) => {
     exit = 'exitingSlideDownPage';
   }
 
+
+  console.log(animate);
   return (
     <div className="effect">
       <AnimatePresence

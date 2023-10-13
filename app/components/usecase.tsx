@@ -83,7 +83,7 @@ const UseCase = ({ animationDirection, usaCaseData, hideNavDown, navDownClicked,
               animate={`animatingSlide${animationDirection}`}
               exit={`exitingSlide${animationDirection}`}
               variants={variants}>
-              <Image className='w-[780px] h-[540px] rounded-xl' src={usaCaseData.image} width={780} height={540} alt=''></Image>
+              <Image className='w-auto h-auto rounded-xl' src={usaCaseData.image} width={780} height={540} alt='' priority={true}></Image>
             </motion.div>
           </AnimatePresence>
         </section>
